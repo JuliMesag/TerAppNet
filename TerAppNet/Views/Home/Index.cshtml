@@ -1,0 +1,58 @@
+﻿@model IEnumerable<TerAppNet.Models.PacienteModel>
+
+@{
+    ViewData["Title"] = "Panel";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/Inicio.css" asp-append-version="true" />
+</head>
+
+<div>
+    <nav class="navbar bg-body-tertiary mb-4">
+        <div class="container-fluid flex-buscador">
+            <form class="d-flex" role="search">
+                <h3 class="mx-2 fw-bold">Pacientes</h3>
+                <input class="buscador form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                @*<button class="btn btn-outline-success" type="submit">Search</button>*@
+            </form>
+        </div>
+    </nav>
+</div>
+
+<div class="flex-info-estados">
+    <a href="#" class="style-info-estados">
+        <p>Todos 10</p>
+    </a>
+    <div class="style-info-estados">
+        <p> <img src="./verde.svg" /> 6 Al día</p>
+    </div>
+    <div class="style-info-estados">
+        <p> <img src="./amarilo.svg" /> 3 No están al día</p>
+    </div>
+    <div class="style-info-estados">
+        <p> <img src="./rojo.svg" /> 1 No ha iniciado semana</p>
+    </div>
+</div>
+
+<div class="flexCard">
+    @foreach (var item in Model)
+    {
+        <div class="targeta p-3">
+            <div class="gridCard">
+                <div>
+                    <img class="imgPerfil" src="@Html.DisplayFor(modelItem => item.FotoPerfil)" alt="Foto" />
+                </div>
+                <div>
+                    <p class="fw-bold m-0">@Html.DisplayFor(modelItem => item.Nombre)</p>
+                    <p class="delimitador" class="m-0">@Html.DisplayFor(modelItem => item.Historial_medico)</p>
+                </div>
+            </div>
+            <div class="progress progresBar" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar progresBarVerde" style="width: 30%"></div>
+            </div>
+        </div>
+    }
+</div>
+
+

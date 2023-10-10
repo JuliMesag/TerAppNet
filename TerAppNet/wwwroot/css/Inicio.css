@@ -1,0 +1,80 @@
+﻿
+.boton {
+    border-radius: 15px;
+    background-color: orangered;
+    color: #ffffff;
+    border: none;
+}
+
+.targeta {
+    width: 289px;
+    height: 144px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #ECECEC;
+    box-shadow: 4px 4px 10px 0px #D1CDC7, -4px -4px 10px 0px #FFF;
+    /*overflow: hidden;*/
+}
+
+.flexCard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1.5rem;
+}
+
+.delimitador {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.2em;
+    color: #727272;
+}
+
+.gridCard {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.imgPerfil {
+    width: 57px;
+    height: 57px;
+    border-radius: 50%;
+}
+
+.progresBar {
+    height: 10px;
+    background-color: #DEDEDE;
+}
+
+.progresBarVerde {
+    background-color: #2EC33DB2;
+}
+
+.flex-info-estados {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.style-info-estados {
+    border-radius: 20px;
+    padding: 5px 30px;
+    background: #EFEEEE;
+    box-shadow: 4px 4px 10px 0px #D1CDC7, -4px -4px 10px 0px #FFF;
+    text-decoration: none;
+    color: #000000;
+}
+
+    .style-info-estados p {
+        margin: 0;
+    }
+
+    .style-info-estados:hover {
+        color: #ffffff;
+        background: #38B2AC;
+    }

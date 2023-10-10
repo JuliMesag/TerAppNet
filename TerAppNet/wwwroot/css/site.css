@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+
+.titulo {
+    font-family: 'Gochi Hand', cursive;
+    color: #000;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.grid-header {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+}
+
+.menu-lateral {
+    height: 100vh;
+    background: #EFEEEE;
+    box-shadow: 4px 0px 16px 0px rgba(209, 205, 199, 0.80);
+}
+
+.div-lat-sup {
+    max-width: 100;
+    height: 159px;
+    flex-shrink: 0;
+    fill: rgba(56, 178, 172, 0.22);
+    background: #38B2AC38;
+}
+
+.colorHeader {
+    background-color: #efeeee !important;
+}
+
+.logo {
+    width: 57px;
+    height: 57px;
+    flex-shrink: 0;
+    border-radius: 50%;
+}
+
+.lofoFlex {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background-color: #efeeee;
+}
+
+.botones-menu {
+    width: 100%;
+    border-radius: 20px;
+    background: #EFEEEE;
+    box-shadow: 4px 4px 10px 0px #D1CDC7, -4px -4px 10px 0px #FFF;
+    font-weight: 600;
+}
+
+.buscador {
+    border-radius: 20px;
+    background: #EFEEEE;
+    box-shadow: 0px 4px 10px 0px #D1CDC7 inset;
+    border: none;
+}
+
+.perfil-terapeuta {
+    height: 130px;
+    position: relative;
+    top: -110px;
+}
+
+.perfil-terapeuta img {
+    border-radius: 50%;
+    max-width: 130px;
+    max-height: auto;
+}
+
+.desc-perfil p {
+    color: #666666;
+}

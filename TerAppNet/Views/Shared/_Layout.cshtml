@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - TerAppNet</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/TerAppNet.styles.css" asp-append-version="true" />
+</head>
+
+<body>
+    <div class="grid-header">
+        <div class="menu-lateral navbar-collapse collapse d-sm-inline-flex d-flex align-items-start">
+            <ul class="navbar-nav flex-grow-1 text-center ">
+
+                <div>
+                    @*div verde sin contenido*@
+                    <div class="div-lat-sup mb-4"></div>
+
+                    <div class="perfil-terapeuta">
+                        <img class="img-fluid" src="https://firebasestorage.googleapis.com/v0/b/imagenescronolux.appspot.com/o/SeccionParaMujer.jfif?alt=media&token=1509ccee-f1ce-42b2-9c64-e72837bfa88a" />
+                        <div class="desc-perfil">
+                            <h4 class="m-0">Carmen Perez</h4>
+                            <p>Terapeuta profesional</p>
+                        </div>
+                    </div>
+                </div>
+
+                <li class="nav-item mb-1 px-3 d-flex mb-3 ">
+                    <a class="px-3 nav-link text-dark botones-menu" asp-area="" asp-controller="Home" asp-action="Index"><img class="px-2" src="./People.svg" alt="" />  Pacientes</a>
+                </li>
+                <li class="nav-item mb-3 px-3 d-flex  ">
+                    <a class="px-3 nav-link text-dark botones-menu" asp-area="" asp-controller="" asp-action=""><img class="px-2" src="./Config.svg" />  Ajustes</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <div>
+                <header>
+                    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white colorHeader">
+                        <div class="container-fluid lofoFlex">
+                            <div>
+                                <img class="logo" src="./logo.png" alt="logo" />
+                                <a class="navbar-brand titulo" asp-area="" asp-controller="Home" asp-action="Index">TerApp</a>
+                            </div>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                    </nav>
+                </header>
+            </div>
+
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+
+            
+
+        </div>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container text-center">
+            &copy; 2023 - TerAppNet - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
